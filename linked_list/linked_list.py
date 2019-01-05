@@ -26,7 +26,7 @@ class LinkedList:
     pass
 
   def remove_head(self):
-    pass
+    self.head = None
 
   def contains(self, value):
     pass
