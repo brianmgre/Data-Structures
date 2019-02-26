@@ -15,7 +15,20 @@ class BinarySearchTree:
             self.right = BinarySearchTree(value)
 
     def contains(self, target):
-        pass
+        if self.value == target:
+            return True
+
+        if self.value < target and self.right:
+            return self.right.contains(target)
+        elif self.value > target and self.left:
+            return self.left.contains(target)
+
+        return False
 
     def get_max(self):
-        pass
+
+        if self.right:
+            return self.right.get_max()
+
+        else:
+            return self.value
