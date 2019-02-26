@@ -88,10 +88,31 @@ class DoublyLinkedList:
             return head.value
 
     def add_to_tail(self, value):
-        pass
+
+        new_node = ListNode(value)
+
+        if not self.head:
+            self.head = new_node
+            self.head = new_node
+
+        else:
+            self.tail.insert_after(new_node)
+            self.tail = new_node
+            self.tail = self.tail.prev
 
     def remove_from_tail(self):
-        pass
+        if not self.head:
+            return None
+
+        elif not self.head.next:
+            head = self.head
+            self.head = None
+            self.tail = None
+            return head.value
+        else:
+            tail = self.tail
+            self.tail = self.tail.prev
+            return tail.value
 
     def move_to_front(self, node):
         pass
