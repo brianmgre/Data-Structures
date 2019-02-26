@@ -48,26 +48,44 @@ class DoublyLinkedList:
         self.tail = node
 
     def add_to_head(self, value):
-        # create a new node
-
-        new_node = ListNode(value)
         # chech to see if there is a head already
 
         if not self.head:
             # if no head then set head and tail to new node
-
-            self.head = new_node
-            self.tail = new_node
+            self.head = ListNode(value)
+            self.tail = self.head
 
         # elements in linked list already
-
         else:
             # update new node as head and point to previous head and have previous head point to new node
-            self.head.insert_before(new_node)
-            self.head = new_node
+            self.head.insert_before(value)
+            self.head = self.head.prev
 
     def remove_from_head(self):
-        pass
+
+        # if there is nothing in list return none
+
+        if not self.head:
+            return None
+
+        # check to see if there is only one node
+        # grab a second reference to our head elements
+        # set head and tail to none
+
+        if not self.head.next:
+            head = self.head
+            self.head = None
+            self.tail = None
+
+            return head.value
+
+        # multiple items in linked list
+        # remove head and make head.next head
+
+        else:
+            head = self.head
+            self.head = self.head.next
+            return head.value
 
     def add_to_tail(self, value):
         pass
