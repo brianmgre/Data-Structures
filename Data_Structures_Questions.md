@@ -3,8 +3,8 @@ For each of the methods associated with each data structure, classify it based o
 ## Linked List
 
 1. What is the runtime complexity of `add_to_tail`?
-  
-    a. What if our list implementation didn't have a reference to the tail of the list in its constructor? What would be the runtime of the `add_to_tail` method?
+
+   a. What if our list implementation didn't have a reference to the tail of the list in its constructor? What would be the runtime of the `add_to_tail` method?
 
 2. What is the runtime complexity of `remove_head`?
 
@@ -22,11 +22,11 @@ For each of the methods associated with each data structure, classify it based o
 
 ## Binary Search Tree
 
-1. What is the runtime complexity of `insert`? 
+1. What is the runtime complexity of `insert`?
 
 2. What is the runtime complexity of `contains`?
 
-3. What is the runtime complexity of `get_max`? 
+3. What is the runtime complexity of `get_max`?
 
 ## Heap
 
@@ -40,7 +40,7 @@ For each of the methods associated with each data structure, classify it based o
 
 5. What is the runtime complexity of `get_max`?
 
-## [Stretch Goal] Doubly Linked List
+## Doubly Linked List
 
 1. What is the runtime complexity of `ListNode.insert_after`?
 

@@ -9,9 +9,9 @@ class BinarySearchTree:
             self.left.insert(value)
         elif value < self.value:
             self.left = BinarySearchTree(value)
-        elif value > self.value and self.right:
+        elif value >= self.value and self.right:
             self.right.insert(value)
-        elif value > self.value:
+        elif value >= self.value:
             self.right = BinarySearchTree(value)
 
     def contains(self, target):
